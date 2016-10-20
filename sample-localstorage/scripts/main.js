@@ -48,7 +48,8 @@ localStorageApp.prototype = {
 
     _getVariable: function () {
         if (localStorage.getItem(getRemoveVariableNameInput.value) != undefined) {
-            message.textContent = "Variable with name " + getRemoveVariableNameInput.value + " found!";
+            //message.textContent = "Variable with name " + getRemoveVariableNameInput.value + " found!";
+	    message.textContent = getRemoveVariableNameInput.value + " is " + window.localStorage.getItem(getRemoveVariableNameInput.value) + ". Good luck! Zanlai.";
         }
         else {
             message.textContent = "No such record found.";
